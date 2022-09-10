@@ -1,18 +1,40 @@
 <template>
+  <NavBar :resumes="resu"/>
+
+
   <img alt="Vue logo" src="./assets/logo.png">
+
+
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-
+import NavBar from './components/NavBar.vue'
 export default {
   name: 'App',
   components: {
+    NavBar,
     HelloWorld
+  },
+  data() {
+    return {
+      resu: ['here 1', 'here 2', 'here 3' ],
+    }
+
+
   }
+
+
 }
 </script>
+
+
+
+
+
+
+
 
 <style>
 #app {
