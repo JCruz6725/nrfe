@@ -1,5 +1,5 @@
 <template>
-  <NavBar :resumes="resu"/>
+  <NavBar :resume_title="resume_title"/>
 
 
   <img alt="Vue logo" src="./assets/logo.png">
@@ -11,6 +11,12 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import NavBar from './components/NavBar.vue'
+//import axios from 'axios'
+
+//function getUser(user){
+//  return axios.get('https://johndjangodev.herokuapp.com/profile/'+user+'/SW')
+//}
+
 export default {
   name: 'App',
   components: {
@@ -19,7 +25,7 @@ export default {
   },
   data() {
     return {
-      resu: ['here 1', 'here 2', 'here 3' ],
+      resume_title: ['Software Engineer', 'Warehouse Helper'],
     }
 
 

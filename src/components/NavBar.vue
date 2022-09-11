@@ -2,10 +2,10 @@
 export default {
   name: 'NavBar',
   props: {
-    resumes: String
+    resume_title: String
   }
 }
- </script>
+</script>
 
 <template>
   <div class="container">
@@ -16,10 +16,10 @@ export default {
 
 
 
-<template v-for = "(resume_link, index) in resumes" :key="index">
+<template v-for = "(title, i) in resume_title" :key="i">
 
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"> {{ resume_link }}</button>
+        <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"> {{ title }}</button>
       </li>
 
 
@@ -30,11 +30,11 @@ export default {
 
   <div class="tab-content" id="myTabContent">
 
-<template v-for="(resume_link, index) in resumes" :key="index">
+<template v-for="(title, i) in resume_title" :key="i">
 
     <div class="tab-pane fade" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab">
 
-      {{ resume_link }}
+      {{ title }}
 
     </div>
 
