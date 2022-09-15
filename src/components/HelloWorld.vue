@@ -1,5 +1,5 @@
 <template>
-  <div>HERE</div>
+  <div></div>
 </template>
 
 <script>
